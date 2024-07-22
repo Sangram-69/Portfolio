@@ -11,16 +11,21 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
     - name: Set up PHP
       uses: shivammathur/setup-php@v2
       with:
         php-version: '7.4'
+
     - name: Build
       run: php index.php
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./
-
-
+    - name: Check Git version
+        run: git --version
+    - name: Check Git status
+        run: git status
