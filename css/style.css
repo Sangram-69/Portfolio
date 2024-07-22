@@ -1,0 +1,134 @@
+/* Tailwind and Bootstrap Custom Styles */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+header.header-animated {
+    position: relative;
+    overflow: hidden;
+}
+
+header.header-animated:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #343A40, #feb47b);
+    animation: gradientBG 15s ease infinite;
+}
+
+header.header-animated .container {
+    position: relative;
+    z-index: 2;
+}
+
+header.header-animated:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff9900;
+}
+
+.animate-fadeInDown {
+    animation: fadeInDown 2s;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+}
+
+.list-group-item {
+    transition: background-color 0.3s;
+}
+
+.list-group-item:hover {
+    background-color: #f0f0f0;
+}
+
+footer {
+    background: linear-gradient(120deg, #343A40, #feb47b);
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #ff7e5f;
+    border-color: #ff7e5f;
+}
+
+.btn-primary:hover {
+    background-color: #feb47b;
+    border-color: #feb47b;
+}
+
+/* Login Modal and Page */
+.modal-content {
+    background: linear-gradient(120deg, #343A40, #feb47b);
+    color: white;
+}
+
+.modal-header, .modal-footer {
+    border: none;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+}
+
+.form-control {
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.container-login {
+    max-width: 500px;
+    margin: auto;
+    padding: 2rem;
+    background: linear-gradient(120deg, #343A40, #feb47b);
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.container-login h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.container-login .btn-primary {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.25rem;
+}
